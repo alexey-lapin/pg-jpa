@@ -1,9 +1,12 @@
 package com.github.alexeylapin.pgjpa;
 
+import com.github.alexeylapin.pgjpa.model.Author;
 import org.junit.jupiter.api.Test;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.utility.DockerImageName;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.sql.ResultSet;
 
@@ -27,8 +30,17 @@ public class DummyTest {
 
     @Test
     void name2() {
-        Persistence.createEntityManagerFactory("test-h2");
-
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("test-h2");
+        try {
+            EntityManager em = emf.createEntityManager();
+            em.getTransaction().begin();
+            Author author = new Author();
+            author.setId(1L);
+            em.persist(author);
+            em.getTransaction().commit();
+        } finally {
+            emf.close();
+        }
     }
 
 }
