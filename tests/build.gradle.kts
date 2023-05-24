@@ -15,7 +15,7 @@ java {
 
 dependencies {
     implementation("ch.qos.logback:logback-classic:1.4.7")
-    implementation("org.hibernate:hibernate-core:5.6.15.Final")
+    implementation("org.hibernate:hibernate-core:6.1.7.Final")
 
     testImplementation(platform("org.junit:junit-bom:5.9.2"))
     testImplementation("org.junit.jupiter:junit-jupiter")
