@@ -34,8 +34,7 @@ public class DummyTest {
         try {
             EntityManager em = emf.createEntityManager();
             em.getTransaction().begin();
-            Author author = new Author();
-            author.setId(1L);
+            Author author = new Author().setId(1L);
             em.persist(author);
             em.getTransaction().commit();
         } finally {

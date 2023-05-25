@@ -14,6 +14,9 @@ java {
 }
 
 dependencies {
+    annotationProcessor("org.projectlombok:lombok:1.18.28")
+    compileOnly("org.projectlombok:lombok:1.18.28")
+
     implementation("ch.qos.logback:logback-classic:1.4.7")
     implementation("org.hibernate:hibernate-core:6.1.7.Final")
 
