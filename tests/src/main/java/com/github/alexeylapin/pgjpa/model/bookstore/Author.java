@@ -1,4 +1,4 @@
-package com.github.alexeylapin.pgjpa.model;
+package com.github.alexeylapin.pgjpa.model.bookstore;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -14,5 +14,7 @@ public class Author {
 
     @Id
     private Long id;
+
+    private String name;
 
 }

@@ -1,6 +1,6 @@
 package com.github.alexeylapin.pgjpa;
 
-import com.github.alexeylapin.pgjpa.model.Author;
+import com.github.alexeylapin.pgjpa.model.bookstore.Author;
 import org.junit.jupiter.api.Test;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.utility.DockerImageName;
@@ -8,7 +8,6 @@ import org.testcontainers.utility.DockerImageName;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
-import java.sql.ResultSet;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
